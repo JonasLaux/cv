@@ -1,124 +1,72 @@
-\documentclass[9pt]{extarticle}
-
-% \documentclass[10pt]{article} %Sets the default text size to 11pt and class to article.
-%------------------------Dimensions--------------------------------------------
-\pagenumbering{gobble}% Remove page numbers (and reset to 1)
-\topmargin=-30pt %length of margin at the top of the page (1 inch added by default)
-\oddsidemargin=0.0in %length of margin on sides for odd pages
-\evensidemargin=0in %length of margin on sides for even pages
-\textwidth=6.7in %How wide you want your text to be
-\marginparwidth=0.5in
-\headheight=0pt %1in margins at top and bottom (1 inch is added to this value by default)
-\headsep=0pt %Increase to increase white space in between headers and the top of the page
-\textheight=9.5in %How tall the text body is allowed to be on each page
- 
-\usepackage{xcolor}
-
-\definecolor{linkcolor}{RGB}{105,0,0}
-
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=0.57in,top=0.52in,bottom=0.52in]{geometry}
+\usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage[colorlinks=true,urlcolor=linkcolor]{hyperref}
-
-\newcommand\tab[1][1cm]{\hspace*{#1}}
-\newcommand\smallspace[1][0.23cm]{\hspace*{#1}}
-\newcommand\negativespace[1][-0.12cm]{\hspace*{#1}}
-
-%\usepackage[T1]{fontenc} 
-%\usepackage{libertine}
-
-
+\usepackage{lmodern}
+\usepackage[colorlinks=true,urlcolor=blue!55!black]{hyperref}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{microtype}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlist[itemize]{leftmargin=1.2em,nosep,topsep=1pt,label=\textbullet}
+\titleformat{\section}{\bfseries\normalsize}{}{0pt}{}[\vspace{-5pt}\rule{\linewidth}{0.35pt}]
+\titlespacing*{\section}{0pt}{6pt}{3pt}
+\newcommand{\role}[3]{\textbf{#1} \textit{#2}\hfill\textit{#3}\par}
 \begin{document}
-
-\centerline{{\LARGE \bf Jonas Laux, M.Sc.}}
-\centerline{\href{mailto:me@jonas-laux.com}{me@jonas-laux.com} +43 681 819 4310}
-
-
-\noindent %Prevents the following text from being indented
-\\\\
-\vspace*{-6pt}
-{\negativespace \Large \bf Recent Professional Experience}\\
-\line(1,0){485}
-\\
-\noindent
-
-\noindent
-{\bf Senior Software Engineer}, \textit{employee at \href{https://bobsled.co}{Bobsled}}  \hfill \textit{from April 2024}
+\begin{center}
+{\LARGE\bfseries Jonas Laux, M.Sc.}\\[-1pt]
+Staff Software Engineer \textbar{} AI Agents \textbar{} Cloud \& Data Platforms\\[1pt]
+Vienna, Austria \textbar{} \href{mailto:me@jonas-laux.com}{me@jonas-laux.com} \textbar{} +43 681 819 4310 \textbar{} \href{https://www.linkedin.com/in/jonas-laux}{LinkedIn} \textbar{} \href{https://github.com/JonasLaux}{GitHub}
+\end{center}
+\vspace{-8pt}
+\section*{Profile}
+Staff engineer building enterprise AI agents, production platforms and cloud-native data products. Experience across agent runtimes, full-stack applications, multi-cloud architecture and large-scale data processing; previously co-founded software for hospital workflows.
+\section*{Experience}
+\role{Staff Software Engineer}{\href{https://bobsled.co}{Bobsled}}{Sep 2026--Present}
 \begin{itemize}
-\setlength\itemsep{0.05em}
-\item Design and develop cloud-native data platforms with TypeScript, \hfill Remote \\ 
-Remix, and multi-cloud infrastructure (GCP, AWS, Azure, Oracle), \\ 
-implementing microservices with event-driven patterns 
-\item Engineer high-performance data processing pipelines with Apache Spark and Iceberg, handling \\ 
-large-scale ETL operations across multiple data warehouses (BigQuery, Snowflake, Databricks)
-\item Design and implement modern data lake architecture with Apache Iceberg, enabling \\ 
-efficient data management and analytics at scale
-\item  Automate infrastructure management with Terraform/CDKTF, \\
-streamlining deployments in complex multi-cloud environment
-\item Drive technical excellence through architecture decisions, \\ 
-comprehensive testing (Cypress, Vitest), and CI/CD automation with GitHub Actions
+\item Build and operate an enterprise AI platform: durable agent execution, shared tool contracts and failure recovery across web, CLI, API, Slack and MCP surfaces.
+\item Strengthen tenant isolation, access controls and observability; build product-health and cost telemetry and automate customer provisioning and deployments with Pulumi.
+\item Help move engineering toward agent-driven development with Claude Code, Cursor and Codex in isolated worktrees, using specs, reusable context, review and live verification.
 \end{itemize}
-
-\noindent
-{\bf Senior Cloud Architect}, \textit{employee at \href{https://anyline.com}{Anyline}}  \hfill \textit{from June 2022} \\
-{\bf Cloud Architect}, \hfill \textit{May 2021 - December 2022} \\
-{\bf Full-Stack Engineer} \hfill \textit{March 2016 - May 2021}
+\vspace{2pt}
+\role{Senior Software Engineer}{Bobsled}{Apr 2024--Sep 2026}
 \begin{itemize}
-\setlength\itemsep{0.05em}
-\item Architect ISO-compliant IaC solutions for optimal scalability and performance \hfill Vienna, Austria
-\item Design and deploy cloud-native architectures for Datalake, ML, and internal services
-\item Lead core-backend development and infrastructure for processing millions of images daily
-\item Provide technical guidance, code reviews, and cloud implementation consultation
+\item Shipped enterprise agents with Claude and LangGraph; contributed to the newer Eve-based agent platform.
+\item Built TypeScript/React applications and event-driven services across GCP, AWS and Azure; delivered Spark/Iceberg pipelines spanning BigQuery, Snowflake and Databricks.
+\item Automated infrastructure and delivery with Terraform/CDKTF, Pulumi, Cypress, Vitest, Playwright and GitHub Actions.
 \end{itemize}
-
-\noindent
-{\bf Technical Architect}, \textit{employee at \href{https://www.oebb.at/}{OEBB}}  \hfill \textit{January 2022 -- April 2022}
+\vspace{2pt}
+\role{Senior Cloud Architect}{\href{https://anyline.com}{Anyline}}{May 2022--Apr 2024}
 \begin{itemize}
-\setlength\itemsep{0.05em}
-\item Support the cloud migration of all systems and comprehend \hfill Vienna, Austria \\
-enterprise architecture for effective feature development.
-\item Collaborate with developers for project adherence and proactively \\ 
-strategize for product improvements.
+\item Designed infrastructure as code for ISO compliance and scalable operations; implemented Kubernetes and serverless workloads for data lakes and ML pipelines.
+\item Advised engineering teams on cloud architecture, code quality and delivery processes.
 \end{itemize}
-
-\noindent
-{\bf Co-Founder \& Software-Engineer}, \textit{Apollon OG}  \hfill \textit{May 2019 -- August 2021}
+\vspace{2pt}
+\role{Technical Architect}{\href{https://www.oebb.at/}{\"OBB}}{Jan--Apr 2022}
 \begin{itemize}
-\setlength\itemsep{0.05em}
-\item Architect/development of MedTech, streamlining oncology processes in hospitals \hfill Vienna, Austria
+\item Supported on-premises-to-Azure migration; developed feature architectures and shaped the technical roadmap with the engineering team.
 \end{itemize}
-
-\noindent
-\\
-\textbf{Additional professional experiences on my \href{https://www.linkedin.com/in/jonas-laux-2aaaa8105}{LinkedIn}} \\
-
-\noindent %Prevents the following text from being indented
-\\
-\vspace*{-6pt}
-{\negativespace \Large \bf Education}\\
-\line(1,0){485}\\
-\\
-\noindent
-{\bf Master of Science - Media Informatics} \hfill \textit{2018} \\ 
-\textit{Universität Wien (Thesis: \href{https://utheses.univie.ac.at/detail/48070/}{Rnd for an automized training for CNNs with generated Data} [Flask, Tensorflow])} \\\\
-\noindent
-{\bf Bachelor of Science - Media Informatics} \hfill \textit{2013} \\
-\textit{Technische Hochschule Mittelhessen (Thesis: API concept for an E-Commerce Marketplace [Zend])} \\
-\\
-\\
-\vspace*{-6pt}
-{\negativespace \Large \bf Publications}\\
-\line(1,0){485}\\
-{\bf \href{https://www.researchgate.net/publication/354259954_Toward_a_Platform_for_Structured_Data_Acquisition_in_Oncology_A_Pilot_Study_on_Prostate_Cancer_Screening}{Toward a Platform for Structured Data Acquisition in Oncology}} \hfill \textit{August 2021} \\ 
-A Pilot Study on Prostate Cancer Screening \\ 
-\\
-
-\noindent
-{\bf Advocate of:}  IaC, QA/test-automation, cloud-native architecture, small \& frequent releases, value teams\\ 
- \tab \tab \smallspace no one-fits-all-projects architecture (monoliths, microservices, serverless, etc.), reconciler pattern \\ \\
-\noindent
-{\bf Technologies:} \textbf{GCP, Terraform, Node.JS, Typescript, Serverless, Kubernetes, Iceberg, \\ 
-\tab \tab \smallspace Data-Warehouses (BigQuery, Snowflake, Databricks), Spark, GraphQL, PubSub, ELK} \\ 
-\tab \tab \smallspace React, React-Native, AWS, Azure, Java, Python
-
-
+\vspace{2pt}
+\role{Cloud Architect}{Anyline}{May 2021--Jan 2022}
+\begin{itemize}
+\item Translated business requirements into architecture across GCP, Azure, AWS and IBM Cloud; built Kubernetes/OpenShift services and high-volume ML data infrastructure.
+\end{itemize}
+\vspace{2pt}
+\role{Full Stack Developer}{Anyline}{Mar 2016--May 2021}
+\begin{itemize}
+\item Designed on-premises and cloud software; built microservices, databases and cross-platform apps, and led internal tooling projects.
+\end{itemize}
+\vspace{2pt}
+\role{Co-Founder \& Software Engineer}{Apollon OG}{May 2019--Aug 2021}
+\begin{itemize}
+\item Built software to improve hospital workflows in oncology; co-authored a pilot study on structured data acquisition in prostate cancer screening.
+\end{itemize}
+\vspace{2pt}
+\textbf{Earlier:} Backend Developer, ImmoWire (2015); Web Developer, Kutech (2014) and kaufhaus.com (2012--2013).
+\section*{Education \& Publication}
+M.Sc., Media Informatics, University of Vienna (2018) \textbar{} B.Sc., Media Informatics, Technische Hochschule Mittelhessen (2013).\\
+\href{https://www.researchgate.net/publication/354259954_Toward_a_Platform_for_Structured_Data_Acquisition_in_Oncology_A_Pilot_Study_on_Prostate_Cancer_Screening}{Toward a Platform for Structured Data Acquisition in Oncology: A Pilot Study on Prostate Cancer Screening} (2021).
 \end{document}
